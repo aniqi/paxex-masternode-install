@@ -1,4 +1,4 @@
-# paxex_masternode_install
+# paxex-masternode-install
 Install paxex-masternode (support Ubuntu 18.04, use at your own risk)
 
 **Commands:**
