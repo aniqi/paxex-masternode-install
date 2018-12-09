@@ -127,5 +127,9 @@ echo "addnode=80.209.234.210" >> $CONF_DIR/$CONF_FILE
 echo "addnode=80.209.235.51" >> $CONF_DIR/$CONF_FILE
 echo "addnode=89.108.125.174" >> $CONF_DIR/$CONF_FILE
 
+crontab -l > paxexcron
+echo "@reboot /usr/local/bin/paxchanged > $HOME/.PAXCHANGE/debug.log 2>&1" >> paxexcron
+crontab paxexcron
+rm paxexcron
 
 paxchanged -daemon
